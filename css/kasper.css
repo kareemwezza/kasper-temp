@@ -828,3 +828,389 @@ header nav .form i {
 }
 
 /* End Skills */
+
+/* start quote */
+
+.quote {
+  padding-top: var(--sections-padding);
+  padding-bottom: var(--sections-padding);
+  background-image: url(../images/quote.jpg);
+  background-size: cover;
+  color: white;
+  text-align: center;
+  position: relative;
+}
+
+.quote::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0 0 0 / 75%);
+}
+
+.quote .container {
+  position: relative;
+}
+
+.quote q {
+  font-size: 30px;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.quote q::before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f10d";
+  font-weight: 900;
+  font-size: 25px;
+}
+
+.quote q::after {
+  position: relative;
+  font-family: "Font Awesome 5 Free";
+  content: "\f10e";
+  font-weight: 900;
+  font-size: 25px;
+}
+
+/* end quote */
+
+/* Start Pricing */
+
+.pricing {
+  padding-top: var(--sections-padding);
+  padding-bottom: var(--sections-padding);
+}
+
+.pricing .plans {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.pricing .plans .plan {
+  background-color: #fcfcfc;
+  text-align: center;
+}
+
+.pricing .plans .plan .head {
+  padding: 40px 20px;
+  border-top: 2px solid var(--main-color);
+  border-bottom: 2px solid var(--main-color);
+}
+
+.pricing .plans .plan .head h3 {
+  font-weight: normal;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+
+.pricing .plans .plan .head span {
+  font-size: 60px;
+  font-weight: bold;
+}
+
+.pricing .plans .plan .head span::before {
+  content: "$";
+  font-size: 20px;
+  position: relative;
+  top: -40px;
+  margin-right: 15px;
+}
+
+.pricing .plans .plan .head span::after {
+  content: "/Mo";
+  font-size: 20px;
+  position: relative;
+  right: -15px;
+}
+
+.pricing .plans .plan ul {
+  border-bottom: 2px solid var(--main-color);
+}
+
+.pricing .plans .plan ul li {
+  padding: 20px;
+  position: relative;
+}
+
+.pricing .plans .plan ul li:not(:last-child)::after {
+  content: "";
+  width: 120px;
+  height: 2px;
+  background-color: var(--main-color);
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.pricing .plans .plan .footer a {
+  display: block;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: black;
+  border: 1px solid var(--main-color);
+  width: fit-content;
+  margin: 30px auto;
+  transition: 300ms ease-out;
+}
+
+.pricing .plans .plan .footer a:hover {
+  background-color: var(--main-color);
+  border: 1px solid #333;
+}
+
+.pricing .contact-text {
+  margin: 50px auto 20px;
+  text-align: center;
+  font-size: 20px;
+}
+
+.pricing .contact-link {
+  display: block;
+  width: fit-content;
+  margin: 20px auto;
+  background-color: var(--main-color);
+  color: white;
+  padding: 15px 30px;
+  text-decoration: none;
+}
+/* End Pricing */
+
+/* Start Subscripe   */
+
+.subscripe {
+  padding-top: var(--sections-padding);
+  padding-bottom: var(--sections-padding);
+  background-image: url(../images/subscribe.jpg);
+  background-size: cover;
+  position: relative;
+  color: white;
+}
+
+.subscripe::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0 0 0 / 50%);
+}
+
+.subscripe .container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 991px) {
+  .subscripe .container {
+    flex-direction: column;
+  }
+}
+
+.subscripe form {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 500px;
+  max-width: 100%;
+}
+
+.subscripe form i {
+  position: absolute;
+  left: 25px;
+}
+
+.subscripe form input[type="email"] {
+  background: none;
+  border: 1px solid white;
+  padding: 20px 20px 20px 60px;
+  caret-color: var(--main-color);
+  color: white;
+  width: calc(100% - 130px);
+  border-right: none;
+}
+
+.subscripe form ::placeholder {
+  color: white;
+}
+
+.subscripe form input[type="submit"] {
+  width: 130px;
+  background-color: var(--main-color);
+  color: white;
+  padding: 20px 10px;
+  border: 1px solid white;
+  text-transform: uppercase;
+  border-left: none;
+}
+
+.subscripe form input[type="email"]:focus,
+.subscripe form input[type="submit"]:focus {
+  outline: none;
+}
+
+.subscripe p {
+  line-height: 2;
+  margin-left: 50px;
+}
+@media (max-width: 991px) {
+  .subscripe p {
+    margin: 30px 0 0;
+  }
+}
+
+/* End Subscripe   */
+
+/* Start Contact US */
+
+.contact {
+  padding-top: var(--sections-padding);
+  padding-bottom: var(--sections-padding);
+}
+
+.contact .content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.contact .content form {
+  flex-basis: 70%;
+}
+.contact .content form .main-input {
+  display: block;
+  padding: 20px;
+  margin-bottom: 30px;
+  border: 1px solid #ccc;
+  width: 100%;
+}
+
+.contact .content form .main-input:focus {
+  outline: none;
+}
+
+.contact .content form textarea.main-input {
+  height: 200px;
+  resize: none;
+}
+
+.contact .content form input[type="submit"] {
+  background-color: var(--main-color);
+  color: white;
+  padding: 20px;
+  border: none;
+  text-transform: uppercase;
+  display: flex;
+  margin-left: auto;
+  cursor: pointer;
+}
+
+.contact .content .info {
+  flex-basis: 25%;
+}
+
+.contact .content .info h4 {
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.contact .content .info .phone {
+  display: block;
+  margin-bottom: 10px;
+  color: #777;
+}
+
+.contact .content .info h4:nth-of-type(2) {
+  margin-top: 90px;
+}
+
+.contact .content .info address {
+  color: #777;
+  line-height: 2;
+}
+
+@media (max-width: 767px) {
+  .contact .content {
+    flex-direction: column;
+  }
+
+  .contact .content form {
+    order: 2;
+  }
+  .contact .content .info {
+    order: 1;
+    text-align: center;
+  }
+  .contact .content .info h4:nth-of-type(2) {
+    margin-top: 30px;
+  }
+  .contact .content .info address {
+    margin-bottom: 30px;
+  }
+}
+/* End Contact US */
+
+/* Start Footer */
+
+footer {
+  padding-top: calc(var(--sections-padding) / 2);
+  padding-bottom: calc(var(--sections-padding) / 2);
+  background-size: cover;
+  background-image: url(../images/subscribe.jpg);
+  position: relative;
+  color: white;
+  text-align: center;
+}
+
+footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0 0 0 / 70%);
+}
+
+footer .container {
+  position: relative;
+}
+
+footer p:not(.copyright) {
+  text-transform: uppercase;
+  padding: 20px;
+  font-size: 22px;
+  width: fit-content;
+  margin: 20px auto;
+  border-bottom: 1px solid white;
+}
+
+footer .social-icons a {
+  padding: 10px 15px;
+  text-decoration: none;
+  color: white;
+  transition: 600ms;
+}
+
+footer .social-icons a:hover {
+  color: var(--main-color);
+}
+
+footer .copyright {
+  margin-top: 60px;
+}
+
+footer .copyright span {
+  font-weight: bold;
+  color: var(--main-color);
+}
+
+/* End Footer */
