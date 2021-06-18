@@ -23,9 +23,19 @@ scrollBtn.addEventListener("click", () => {
 
 window.onscroll = () => {
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    console.log("scrolled");
     scrollBtn.style.display = "flex";
   } else {
     scrollBtn.style.display = "none";
   }
 };
+
+const searchButton = document.querySelector(".search-button");
+const searchClose = document.querySelector("button.close");
+const searchModal = document.querySelector(".search");
+
+searchClose.addEventListener("click", () => {
+  searchModal.style.display = "none";
+});
+searchButton.addEventListener("click", () => {
+  searchModal.style.display = "flex";
+});

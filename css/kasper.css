@@ -208,6 +208,7 @@ header nav .form i {
   top: 50%;
   right: 0;
   transform: translateY(-50%);
+  cursor: pointer;
 }
 
 /* end header */
@@ -1212,6 +1213,9 @@ footer .copyright span {
   font-weight: bold;
   color: var(--main-color);
 }
+/* End Footer */
+
+/* Scroll button */
 
 button.scroll {
   position: fixed;
@@ -1232,4 +1236,48 @@ button.scroll {
   z-index: 99;
 }
 
-/* End Footer */
+/* Search Modal */
+
+.search {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 90%;
+  height: 90%;
+  background-color: rgba(10 10 10 / 80%);
+  z-index: 100;
+  transform: translate(-50%, -50%);
+}
+
+.search form {
+  width: 90%;
+}
+
+.search form input {
+  margin: auto;
+  width: 100%;
+  background: none;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #4f504f;
+  padding: 20px 10px;
+  color: white;
+}
+
+.search form input:focus {
+  border-bottom: 1px solid var(--main-color);
+}
+
+.search button {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: none;
+  color: white;
+  border: none;
+  font-size: 25px;
+  cursor: pointer;
+}
